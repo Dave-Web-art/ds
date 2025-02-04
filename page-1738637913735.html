@@ -1,0 +1,1020 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      
+       <title>{{project.seoTitle}}</title>
+      <!-- SEO Description -->
+      <meta name="description" content="{{project.seoDescription}}">
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
+
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
+
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Dynamic Meta Tags -->
+      <meta name="description" content="{{project.meta.ogDescription}}">
+      <meta name="keywords" content="{{project.meta.keywords}}">
+      <meta name="robots" content="{{project.meta.robotsMeta}}">
+      <meta name="google-site-verification" content="{{project.meta.googleVerification}}">
+      <meta name="baidu-verification" content="{{project.meta.baiduVerification}}">
+      <meta name="yandex-verification" content="{{project.meta.yandexVerification}}">
+      <meta name="bing-verification" content="{{project.meta.bingVerification}}">
+      <meta property="og:title" content="{{project.meta.ogTitle}}">
+      <meta property="og:description" content="{{project.meta.ogDescription}}">
+      <meta property="og:image" content="{{project.meta.ogImage}}">
+      <meta property="og:type" content="website">
+      <meta property="og:locale" content="en_US">
+      <meta property="og:site_name" content="{{project.name}}">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content="{{project.meta.ogTitle}}">
+      <meta name="twitter:description" content="{{project.meta.ogDescription}}">
+      <meta name="twitter:image" content="{{project.meta.ogImage}}">
+
+      <!-- Base Styles -->
+      <style>
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="80b8e801-1a00-4cbc-b63e-5ef5b6d79671" data-section-id="80b8e801-1a00-4cbc-b63e-5ef5b6d79671">
+
+<htmlCode>
+<div id="root">
+    <nav id="navbar" class="bg-neutral-900 text-white fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#hero" class="flex items-center">
+                        <img class="h-8 w-8 rounded-full" src="https://yt3.googleusercontent.com/K0M6FLMwgOWcShrPdj1kWTHNA0LusmgjaPnlnEJ1-FiR839UtlKnwwyfTVES6b2JVmu1rcT62A=s160-c-k-c0x00ffffff-no-rj" alt="दैनिक समाचार">
+                        <span class="ml-2 text-xl font-bold">दैनिक समाचार</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#hero" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-neutral-700">Home</a>
+                        <a href="#latestVideos" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-neutral-700">Latest Videos</a>
+                        <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-neutral-700">About</a>
+                        <a href="#categories" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-neutral-700">Categories</a>
+                        <a href="#popularContent" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-neutral-700">Popular</a>
+                        <a href="#subscribe" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-neutral-700">Subscribe</a>
+                        <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-neutral-700">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md hover:bg-neutral-700 focus:outline-none">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path class="mobile-menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Home</a>
+                    <a href="#latestVideos" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Latest Videos</a>
+                    <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">About</a>
+                    <a href="#categories" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Categories</a>
+                    <a href="#popularContent" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Popular</a>
+                    <a href="#subscribe" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Subscribe</a>
+                    <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-neutral-700">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Add smooth scrolling to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</div>
+</htmlCode></element><element id="59cb05a4-a08f-4112-b539-66dd2f039139" data-section-id="59cb05a4-a08f-4112-b539-66dd2f039139">
+
+
+                
+                <htmlcode id="el-4ey8th8s">
+<div id="root">
+    <section id="hero" class="bg-neutral-900 text-white min-h-[70vh] pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col md:flex-row items-center justify-center py-12" id="el-men0feks" style="height: 678px;">
+            <div class="md:w-1/2 space-y-6 animate__animated animate__fadeInLeft" id="el-vft09mgr">
+    <h1 class="text-4xl md:text-6xl font-bold leading-tight" id="el-emacipt5">
+        दैनिक समाचार
+        <span class="block text-2xl md:text-3xl mt-2 text-gray-300" id="el-gh2lukgv">आपका भरोसेमंद समाचार स्रोत</span>
+    </h1>
+    <p class="text-lg md:text-xl text-gray-300" id="el-l3u554wz">
+        राजनीति, अर्थव्यवस्था, मनोरंजन, खेल और अधिक की विश्वसनीय, तथ्यात्मक और निष्पक्ष रिपोर्टिंग
+    </p>
+    <div class="flex space-x-4" id="el-24gfxys5">
+        <a href="#subscribe" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 animate__animated animate__pulse animate__infinite" id="el-jb9fp3hu">
+            Subscribe Now
+        </a>
+        <a href="#latestVideos" class="bg-neutral-700 hover:bg-neutral-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center space-x-2" id="el-b2svaom2">
+            <span id="el-kxt75p39">Latest Videos</span>
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" id="el-iaf92dr0">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+            </svg>
+        </a>
+    </div>
+    <div class="flex items-center space-x-4 text-sm" id="el-w4b6u99v">
+        <div class="flex items-center" id="el-4ts5xgsh" style="display: flex; flex-direction: column;">
+        </div>
+        <div class="flex items-center" id="el-hai4hvji">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" id="el-64sg94ks">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+            </svg>
+        </div>
+    </div>
+</div>
+            <div class="md:w-1/2 mt-8 md:mt-0 animate__animated animate__fadeInRight" id="el-fv86iocz">
+                <div class="relative" id="el-39svgnjy">
+                    <img src="https://yt3.googleusercontent.com/sqUkBLEViNYYfsV4difQJzKGwwLSYilMMwdOX22_wCdmz7z_3yXWLfNUGAPzbv-mtoQyKQri2A=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj" alt="दैनिक समाचार Channel Banner" class="rounded-lg shadow-2xl transform hover:scale-105 transition duration-300 transition-opacity opacity-100" loading="lazy" id="el-ri5wh8nt">
+                    <div class="absolute -bottom-4 -right-4 bg-neutral-800 p-4 rounded-lg shadow-lg" id="el-eosgw93p">
+                        <img src="https://yt3.googleusercontent.com/K0M6FLMwgOWcShrPdj1kWTHNA0LusmgjaPnlnEJ1-FiR839UtlKnwwyfTVES6b2JVmu1rcT62A=s160-c-k-c0x00ffffff-no-rj" alt="Channel Logo" class="w-16 h-16 rounded-full border-4 border-neutral-900 transition-opacity duration-300 opacity-100" loading="lazy" id="el-t24m18f2">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 w-full" id="el-a4l949t2">
+            <svg class="w-full h-12 text-white" viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" id="el-0ezzmn1u">
+                <path d="M0 48h1440V0C1440 0 1140 48 720 48C300 48 0 0 0 0v48z" fill="currentColor" id="el-68rn12bo"></path>
+            </svg>
+        </div>
+    </section>
+</div>
+</htmlcode>
+              
+              </element><element id="e7463605-a449-4279-9aca-1fc731bc643b" data-section-id="e7463605-a449-4279-9aca-1fc731bc643b">
+
+<htmlCode>
+<div id="root">
+    <section id="latestVideos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate__animated animate__fadeIn">
+                <h2 class="text-3xl font-bold text-neutral-900 mb-4">Latest Videos</h2>
+                <p class="text-lg text-neutral-600">Stay updated with our most recent news coverage</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video Card 1 -->
+                <div class="bg-neutral-100 rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105 duration-300 animate__animated animate__fadeInUp">
+                    <img src="https://i.ytimg.com/vi/jhSfkd9Qcy8/hqdefault.jpg" alt="Video Thumbnail" class="w-full object-cover h-48">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">राष्ट्रपति मुर्मू ने की INS विक्रांत की सवारी</h3>
+                        <p class="text-neutral-600 text-sm mb-4">24 views • 2 months ago</p>
+                        <a href="#" class="inline-flex items-center text-red-600 hover:text-red-700">
+                            Watch Now
+                            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video Card 2 -->
+                <div class="bg-neutral-100 rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105 duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                    <img src="https://i.ytimg.com/vi/jhSfkd9Qcy8/hqdefault.jpg" alt="Video Thumbnail" class="w-full object-cover h-48">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">छठ पूजा और अधिक समाचार</h3>
+                        <p class="text-neutral-600 text-sm mb-4">40 views • 3 months ago</p>
+                        <a href="#" class="inline-flex items-center text-red-600 hover:text-red-700">
+                            Watch Now
+                            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video Card 3 -->
+                <div class="bg-neutral-100 rounded-lg overflow-hidden shadow-lg transition transform hover:scale-105 duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                    <img src="https://i.ytimg.com/vi/jhSfkd9Qcy8/hqdefault.jpg" alt="Video Thumbnail" class="w-full object-cover h-48">
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-2">महाराष्ट्र चुनाव विशेष</h3>
+                        <p class="text-neutral-600 text-sm mb-4">29 views • 1 month ago</p>
+                        <a href="#" class="inline-flex items-center text-red-600 hover:text-red-700">
+                            Watch Now
+                            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition duration-300 animate__animated animate__pulse animate__infinite">
+                    View All Videos
+                    <svg class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="8a0545c5-7717-4b12-a193-c42445786ad2" data-section-id="8a0545c5-7717-4b12-a193-c42445786ad2">
+
+<htmlCode>
+<div id="root">
+    <section id="about" class="py-20 bg-neutral-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="animate__animated animate__fadeInLeft">
+                    <div class="relative">
+                        <img src="https://yt3.googleusercontent.com/K0M6FLMwgOWcShrPdj1kWTHNA0LusmgjaPnlnEJ1-FiR839UtlKnwwyfTVES6b2JVmu1rcT62A=s160-c-k-c0x00ffffff-no-rj" 
+                             alt="Channel Logo" 
+                             class="rounded-lg shadow-2xl w-full max-w-md mx-auto"
+                        >
+                        <div class="absolute -bottom-6 -right-6 bg-red-600 text-white p-4 rounded-lg shadow-lg animate__animated animate__pulse animate__infinite">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold">222+</div>
+                                <div class="text-sm">Videos</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6 animate__animated animate__fadeInRight">
+                    <h2 class="text-3xl font-bold">About दैनिक समाचार</h2>
+                    <p class="text-lg text-gray-300">
+                        दैनिक समाचार में आपका स्वागत है—राजनीति, अर्थव्यवस्था, मनोरंजन, खेल और अधिक की विश्वसनीय, तथ्यात्मक और निष्पक्ष रिपोर्टिंग का आपका भरोसेमंद स्रोत।
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-neutral-800 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-red-500">107+</div>
+                            <div class="text-sm text-gray-400">Subscribers</div>
+                        </div>
+                        <div class="bg-neutral-800 p-4 rounded-lg">
+                            <div class="text-2xl font-bold text-red-500">222+</div>
+                            <div class="text-sm text-gray-400">Videos Published</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mt-8">
+                        <h3 class="text-xl font-semibold">What We Cover:</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                राजनीति और समसामयिक मुद्दे
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                अर्थव्यवस्था और व्यापार
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                खेल और मनोरंजन
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="#subscribe" class="inline-block mt-8 px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition duration-300">
+                        Subscribe Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="fa211d16-7c91-48c2-a694-dcd2afed08b0" data-section-id="fa211d16-7c91-48c2-a694-dcd2afed08b0">
+
+<htmlCode>
+<div id="root">
+    <section id="categories" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-3xl font-bold text-neutral-900 mb-4">News Categories</h2>
+                <p class="text-lg text-neutral-600">Explore our diverse range of news coverage</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Politics -->
+                <div class="bg-neutral-100 rounded-xl p-6 hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate__animated animate__fadeInUp">
+                    <div class="bg-red-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">राजनीति</h3>
+                    <p class="text-neutral-600 mb-4">राष्ट्रीय और अंतर्राष्ट्रीय राजनीतिक घटनाक्रम</p>
+                    <a href="#" class="text-red-600 hover:text-red-700 inline-flex items-center">
+                        View News
+                        <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Economy -->
+                <div class="bg-neutral-100 rounded-xl p-6 hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                    <div class="bg-red-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">अर्थव्यवस्था</h3>
+                    <p class="text-neutral-600 mb-4">आर्थिक नीतियां और बाजार विश्लेषण</p>
+                    <a href="#" class="text-red-600 hover:text-red-700 inline-flex items-center">
+                        View News
+                        <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Sports -->
+                <div class="bg-neutral-100 rounded-xl p-6 hover:shadow-xl transition duration-300 transform hover:-translate-y-1 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                    <div class="bg-red-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">खेल</h3>
+                    <p class="text-neutral-600 mb-4">खेल जगत की ताजा खबरें और विश्लेषण</p>
+                    <a href="#" class="text-red-600 hover:text-red-700 inline-flex items-center">
+                        View News
+                        <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition duration-300 animate__animated animate__pulse animate__infinite">
+                    Explore All Categories
+                </button>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="4f9cb686-deb7-4c56-b3b8-aed42ab217f7" data-section-id="4f9cb686-deb7-4c56-b3b8-aed42ab217f7">
+
+<htmlCode>
+<div id="root">
+    <section id="popularContent" class="py-20 bg-neutral-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 animate__animated animate__fadeIn">
+                <h2 class="text-3xl font-bold mb-4">Popular Content</h2>
+                <p class="text-lg text-gray-400">Most viewed news coverage and updates</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Popular Video 1 -->
+                <div class="bg-neutral-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 animate__animated animate__fadeInUp">
+                    <img src="https://i.ytimg.com/vi/jhSfkd9Qcy8/hqdefault.jpg" alt="Video Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm">Trending</span>
+                            <span class="ml-2 text-gray-400 text-sm">40 views</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">डिजिटल अरेस्ट लेकर PM मोदी ने मन की बात में क्या-क्या कहा?</h3>
+                        <div class="flex items-center text-gray-400 text-sm mb-4">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                            </svg>
+                            3 months ago
+                        </div>
+                        <a href="#" class="inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300">Watch Now</a>
+                    </div>
+                </div>
+
+                <!-- Popular Video 2 -->
+                <div class="bg-neutral-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                    <img src="https://i.ytimg.com/vi/jhSfkd9Qcy8/hqdefault.jpg" alt="Video Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm">Popular</span>
+                            <span class="ml-2 text-gray-400 text-sm">29 views</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Varanasi Ganga Aarti 2024</h3>
+                        <div class="flex items-center text-gray-400 text-sm mb-4">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                            </svg>
+                            1 month ago
+                        </div>
+                        <a href="#" class="inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300">Watch Now</a>
+                    </div>
+                </div>
+
+                <!-- Popular Video 3 -->
+                <div class="bg-neutral-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                    <img src="https://i.ytimg.com/vi/jhSfkd9Qcy8/hqdefault.jpg" alt="Video Thumbnail" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm">Featured</span>
+                            <span class="ml-2 text-gray-400 text-sm">24 views</span>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">राष्ट्रपति मुर्मू ने की INS विक्रांत की सवारी</h3>
+                        <div class="flex items-center text-gray-400 text-sm mb-4">
+                            <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                            </svg>
+                            2 months ago
+                        </div>
+                        <a href="#" class="inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300">Watch Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center px-6 py-3 border-2 border-red-600 text-red-600 font-medium rounded-lg hover:bg-red-600 hover:text-white transition duration-300 animate__animated animate__pulse animate__infinite">
+                    View More Popular Content
+                    <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="f6cd9596-16b8-4426-b9d0-8a6436ede14e" data-section-id="f6cd9596-16b8-4426-b9d0-8a6436ede14e">
+
+<htmlCode>
+<div id="root">
+    <section id="subscribe" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-neutral-900 rounded-2xl overflow-hidden shadow-2xl">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-12 animate__animated animate__fadeInLeft">
+                        <div class="flex items-center space-x-4 mb-8">
+                            <img src="https://yt3.googleusercontent.com/K0M6FLMwgOWcShrPdj1kWTHNA0LusmgjaPnlnEJ1-FiR839UtlKnwwyfTVES6b2JVmu1rcT62A=s160-c-k-c0x00ffffff-no-rj" 
+                                 alt="Channel Logo" 
+                                 class="w-16 h-16 rounded-full border-4 border-red-600">
+                            <div>
+                                <h3 class="text-white text-2xl font-bold">दैनिक समाचार</h3>
+                                <p class="text-gray-400">107 Subscribers</p>
+                            </div>
+                        </div>
+                        
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                            Subscribe for Daily News Updates
+                        </h2>
+                        
+                        <p class="text-gray-400 mb-8">
+                            Stay informed with our comprehensive coverage of politics, economy, entertainment, sports, and more. Join our growing community for reliable, factual, and unbiased reporting.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-red-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                Daily News Updates
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-red-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                Breaking News Alerts
+                            </div>
+                            <div class="flex items-center text-gray-300">
+                                <svg class="w-5 h-5 text-red-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                </svg>
+                                Exclusive Content Access
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2 p-12 bg-neutral-800 animate__animated animate__fadeInRight">
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-gray-300 text-sm font-medium mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-neutral-700 border border-neutral-600 rounded-lg text-white focus:outline-none focus:border-red-600" placeholder="Enter your name">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-300 text-sm font-medium mb-2">Email</label>
+                                <input type="email" class="w-full px-4 py-3 bg-neutral-700 border border-neutral-600 rounded-lg text-white focus:outline-none focus:border-red-600" placeholder="Enter your email">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-gray-300 text-sm font-medium mb-2">Preferred News Categories</label>
+                                <select class="w-full px-4 py-3 bg-neutral-700 border border-neutral-600 rounded-lg text-white focus:outline-none focus:border-red-600">
+                                    <option>All Categories</option>
+                                    <option>Politics</option>
+                                    <option>Economy</option>
+                                    <option>Sports</option>
+                                    <option>Entertainment</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 transition duration-300 animate__animated animate__pulse animate__infinite">
+                                Subscribe Now
+                            </button>
+                        </form>
+                        
+                        <p class="text-gray-400 text-sm mt-6 text-center">
+                            By subscribing, you agree to receive news updates and promotional content from दैनिक समाचार
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="8ec6fc00-92c6-438e-a141-34a4d8fc1bf6" data-section-id="8ec6fc00-92c6-438e-a141-34a4d8fc1bf6">
+
+<htmlCode>
+<div id="root">
+    <section id="testimonials" class="py-20 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-3xl font-bold text-white mb-4">Viewer Testimonials</h2>
+                <p class="text-lg text-gray-400">What our viewers say about our news coverage</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-neutral-800 rounded-lg p-8 shadow-lg hover:shadow-2xl transition duration-300 animate__animated animate__fadeInUp">
+                    <div class="flex items-center mb-6">
+                        <div class="h-12 w-12 rounded-full bg-red-600 flex items-center justify-center text-white text-xl font-bold">
+                            R
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-white font-semibold">Rahul Kumar</h4>
+                            <p class="text-gray-400 text-sm">Loyal Viewer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "एक बेहतरीन न्यूज चैनल जो सटीक और निष्पक्ष जानकारी प्रदान करता है। रोज की अपडेट्स के लिए मेरा पसंदीदा स्रोत।"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-neutral-800 rounded-lg p-8 shadow-lg hover:shadow-2xl transition duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                    <div class="flex items-center mb-6">
+                        <div class="h-12 w-12 rounded-full bg-red-600 flex items-center justify-center text-white text-xl font-bold">
+                            P
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-white font-semibold">Priya Singh</h4>
+                            <p class="text-gray-400 text-sm">Regular Viewer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "समाचारों की गहन समझ और विश्लेषण के लिए धन्यवाद। आपका कवरेज हमेशा संतुलित और विश्वसनीय होता है।"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-neutral-800 rounded-lg p-8 shadow-lg hover:shadow-2xl transition duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                    <div class="flex items-center mb-6">
+                        <div class="h-12 w-12 rounded-full bg-red-600 flex items-center justify-center text-white text-xl font-bold">
+                            A
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-white font-semibold">Amit Verma</h4>
+                            <p class="text-gray-400 text-sm">Subscriber</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        "ताजा खबरों और विश्लेषण के लिए सर्वश्रेष्ठ चैनल। सटीक रिपोर्टिंग और समय पर अपडेट्स के लिए धन्यवाद।"
+                    </p>
+                    <div class="flex text-yellow-400">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="242dfdc3-d7e6-44eb-9971-82dd2cc92ef5" data-section-id="242dfdc3-d7e6-44eb-9971-82dd2cc92ef5">
+
